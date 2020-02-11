@@ -1,0 +1,35 @@
+#title{
+    color: aqua;
+}
+html{
+    margin: 0px;
+}
+
+.header{
+    display: flex;
+	/* Выравниваем элементы вертикально по центру. */
+    background-color: #39b54a;
+}
+.menu{
+    margin: 10px;
+    padding: 3px;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+#content {
+    width: 500px; /* Ширина слоя */
+
+   }
+.main {
+    width: 500px; /* Ширина слоя */
+    margin: 0 auto 50px; /* Выравнивание по центру */
+   }
+.footer {
+    position: fixed; /* Фиксированное положение */
+    left: 0; bottom: 0; /* Левый нижний угол */
+    padding: 10px; /* Поля вокруг текста */
+    background: #39b54a; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    width: 100%; /* Ширина слоя */
+   }
