@@ -1,15 +1,7 @@
 {% extends "index.html" %}
-{% block topmenu %}
-             <img width="100px" src="https://svirtus.cdnvideo.ru/DmMIwP_GHD86juuKvyLnpow1hfY=/0x0:150x150/200x200/filters:quality(100)/https://hb.bizmrg.com/esports-core-media/7f/7f22ab72cb26f6a98cf417bf8600f6ad.png?m=080ae63c9afb707098f0ae6f534dfa38">
-            <button><a href="http://127.0.0.1:8000">Главная страница</a></button>
-            <button><a href="http://127.0.0.1:8000/about/">О сайте</a></button>
-            <button><a href="http://127.0.0.1:8000/contacts/">Контакты</a></button>
-            <h1 align="center">Контакты</h1>
-{% endblock %}
+{% load static %}
 {% block content %}
-    Наши контактные данные:+79995556235
+    Наши контактные данные:+79995556235<br>
+    <p align="center">Наш постоянный спонсор:<a id="sponsor">https://vzlompentagona.com</a></p>
 {% endblock %}
 
-{% block footer %}
-
-{% endblock %}

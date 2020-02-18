@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<div lang="en" xmlns="http://www.w3.org/1999/html">
+
     <head>
         <meta charset="UTF-8">
-        <title>Title</title>
+        <title>Блог с симплом на аве</title>
         <link rel="stylesheet", href="{% static 'style.css' %}">
     </head>
     <p>
@@ -22,20 +23,19 @@
             <div class="main">
                 {% for post in posts %}
                     <h1><a href="{% url 'post' post.id %}">
-                        {{ post.post_title }}
+                        <img src="{{ post.post_foto }}" width="100px" height="80px" align="left" class="post_foto">
+                        <div id="title">{{ post.post_title }}</div>
 
                     </a></h1>
                     <p>{{ post.post_text }}</p>
-                    {{ keywords }}
-
-
+                    <div class="keywords">{{ keywords }}</div>
                 {% endfor %}
             </div>
-        {% endblock %}<br>
+        {% endblock %}
 
         {% block footer %}
             <div class="footer">
-            <p align="right">Наши контактные данные:+79995556235</p>
+            <p align="right" id="footer-text">Наши контактные данные:+79995556235</p>
             </div>
         {% endblock %}
 

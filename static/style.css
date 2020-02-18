@@ -1,8 +1,15 @@
 #title{
-    color: aqua;
+    margin-top: 40px;
+    margin-bottom: 10px;
 }
-html{
-    margin: 0px;
+
+.keywords{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+*{
+    margin: 0;
 }
 
 .header{
@@ -11,10 +18,14 @@ html{
     background-color: #39b54a;
 }
 .menu{
+    display: inline-block;
     margin: 10px;
     padding: 3px;
     border: 3px solid black;
     border-radius: 10px;
+}
+.menu:hover{
+    box-shadow: 3px 3px  black;
 }
 
 #content {
@@ -24,7 +35,9 @@ html{
 .main {
     width: 500px; /* Ширина слоя */
     margin: 0 auto 50px; /* Выравнивание по центру */
-   }
+    text-decoration: none  ;
+
+}
 .footer {
     position: fixed; /* Фиксированное положение */
     left: 0; bottom: 0; /* Левый нижний угол */
@@ -33,3 +46,39 @@ html{
     color: #fff; /* Цвет текста */
     width: 100%; /* Ширина слоя */
    }
+
+.post_text{
+    margin: 10px;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    color: #39b54a;
+}
+
+.post_foto{
+    margin-top:40px ;
+    margin-right:10px ;
+    margin-bottom: 10px;
+}
+
+#about_blog{
+    margin:5px 5px;
+}
+
+
+
+#sponsor:hover{
+    background: black;
+    color: #0dff00;
+    font-size: 100px;
+
+}
+
+#footer-text{
+    padding-right:20px ;
+}

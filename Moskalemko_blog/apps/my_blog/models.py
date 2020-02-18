@@ -14,6 +14,8 @@ class Post(models.Model):
     post_anatation = models.CharField(max_length=200)
     post_text = models.TextField()
     key_words = models.ManyToManyField(Keywords)
+    post_foto = models.ImageField( upload_to='static\imgs', blank=True)
     def __str__(self):
         return f'{self.id} {self.post_title}'
+
 
