@@ -1,3 +1,5 @@
+
+
 #title{
     margin-top: 40px;
     margin-bottom: 10px;
@@ -50,11 +52,14 @@
 .post_text{
     margin: 10px;
     text-align: center;
+
 }
 
 a{
     text-decoration: none;
+    color: black;
 }
+
 
 a:hover{
     color: #39b54a;
@@ -82,3 +87,4 @@ a:hover{
 #footer-text{
     padding-right:20px ;
 }
+

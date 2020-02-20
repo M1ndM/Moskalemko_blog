@@ -8,6 +8,23 @@ class Keywords(models.Model):
     def __str__(self):
         return f'{self.id} {self.key_word}'
 
+
+class Author(models.Model):
+    id = models.BigAutoField(primary_key=True)
+    author_name = models.CharField(max_length=150)
+    birth_date = models.DateField()
+    photo = models.ImageField(upload_to='static\imgs', blank=True)
+    is_active = models.BooleanField(default=False)
+    Male = 'Male'
+    Female = 'Female'
+    Other = 'Other'
+    GENDER_CHOICES = [(Male,'Male'),(Female, 'Female'), (Other, 'Other')]
+    gender_choices = models.CharField(max_length=100, choices=GENDER_CHOICES,default=Other)
+    email = models.CharField(max_length=150)
+    country  = models.CharField(max_length=150)
+
+
+
 class Post(models.Model):
     id = models.BigAutoField(primary_key = True)
     post_title = models.CharField(max_length=100)
@@ -15,7 +32,14 @@ class Post(models.Model):
     post_text = models.TextField()
     key_words = models.ManyToManyField(Keywords)
     post_foto = models.ImageField( upload_to='static\imgs', blank=True)
+
+
     def __str__(self):
         return f'{self.id} {self.post_title}'
+
+
+
+
+
 
 
