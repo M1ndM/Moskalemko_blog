@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, re_path
 
-from Moskalemko_blog.apps.my_blog.views import index, about, contacts, post
+from Moskalemko_blog.apps.my_blog.views import index, about, contacts, post, author
 
 
 
@@ -25,6 +25,7 @@ urlpatterns = [
     path('', index),
     path('about/', about),
     path('contacts/', contacts),
-    re_path(r'^post/(?P<post_id>\d+)$', post,  name='post')
+    re_path(r'^post/(?P<post_id>\d+)$', post,  name='post'),
+    re_path(r'^author/(?P<author_id>\d+)$', author,  name='author')
 
 ]

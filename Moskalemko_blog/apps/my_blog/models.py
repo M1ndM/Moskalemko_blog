@@ -22,7 +22,11 @@ class Author(models.Model):
     gender_choices = models.CharField(max_length=100, choices=GENDER_CHOICES,default=Other)
     email = models.CharField(max_length=150)
     country  = models.CharField(max_length=150)
+    author_description  = models.TextField(default='Это один из наших авторов')
+    author_status = models.CharField(max_length=300, default=birth_date)
 
+    def __str__(self):
+        return f'{self.id} {self.author_name}'
 
 
 class Post(models.Model):

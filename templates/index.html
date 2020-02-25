@@ -24,11 +24,13 @@
                 {% for post in posts %}
                     <h1><a href="{% url 'post' post.id %}">
                         <img src="{{ post.post_foto }}" width="100px" height="80px" align="left" class="post_foto">
+
                         <div id="title">{{ post.post_title }}</div>
 
                     </a></h1>
                     <p class="preview">{{ post.post_text }}</p>
                     <div class="keywords">{{ keywords }}</div>
+                    <a href="{% url 'author' authors.id %}">{{ authors.author_name }}</a>
                 {% endfor %}
             </div>
         {% endblock %}
