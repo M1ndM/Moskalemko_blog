@@ -43,6 +43,7 @@ def author(requset, author_id):
     author = Author.objects.get(id=author_id)
     context = {
         "author_name": author.author_name,
-        "author_photo":author.photo
+        "author_photo":author.photo,
+        "author_description":author.description
     }
     return render(requset, "author_page.html", context)

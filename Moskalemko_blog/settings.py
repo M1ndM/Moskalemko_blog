@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Moskalemko_blog.apps.my_blog',
+    'ckeditor',
+    'ckeditor_uploader',
 ]
 
 MIDDLEWARE = [
@@ -49,6 +51,11 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+CKEDITOR_CONFIGS = {
+    'default':{'toolbar': 'None'}
+}
+
 
 ROOT_URLCONF = 'Moskalemko_blog.urls'
 
@@ -124,3 +131,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 
 ]
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+CKEDITOR_UPLOAD_PATH = "/uploads/"

@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, re_path
-
+from  django.urls import include
 from Moskalemko_blog.apps.my_blog.views import index, about, contacts, post, author
 
 
@@ -26,6 +26,8 @@ urlpatterns = [
     path('about/', about),
     path('contacts/', contacts),
     re_path(r'^post/(?P<post_id>\d+)$', post,  name='post'),
-    re_path(r'^author/(?P<author_id>\d+)$', author,  name='author')
+    re_path(r'^author/(?P<author_id>\d+)$', author,  name='author'),
+    re_path(r'^ckeditor/', include('ckeditor_uploader.urls'))
+
 
 ]
