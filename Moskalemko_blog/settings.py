@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'Moskalemko_blog.apps.my_blog',
     'ckeditor',
     'ckeditor_uploader',
+    'bootstrap4'
 ]
 
 MIDDLEWARE = [

@@ -1,9 +1,6 @@
 
 
-#title{
-    margin-top: 40px;
-    margin-bottom: 10px;
-}
+
 
 .keywords{
     margin-top: 10px;
@@ -19,16 +16,9 @@
 	/* Выравниваем элементы вертикально по центру. */
     background-color: #39b54a;
 }
-.menu{
-    display: inline-block;
-    margin: 10px;
-    padding: 3px;
-    border: 3px solid black;
-    border-radius: 10px;
-}
-.menu:hover{
-    box-shadow: 3px 3px  black;
-}
+
+
+
 
 #content {
     width: 500px; /* Ширина слоя */
@@ -44,7 +34,7 @@
     position: fixed; /* Фиксированное положение */
     left: 0; bottom: 0; /* Левый нижний угол */
     padding: 10px; /* Поля вокруг текста */
-    background: #39b54a; /* Цвет фона */
+    background: #095fe0; /* Цвет фона */
     color: #fff; /* Цвет текста */
     width: 100%; /* Ширина слоя */
    }
@@ -55,15 +45,9 @@
 
 }
 
-a{
-    text-decoration: none;
-    color: black;
-}
 
 
-a:hover{
-    color: #39b54a;
-}
+
 
 .post_foto{
     margin-top:40px ;
@@ -86,13 +70,14 @@ a:hover{
 
 #footer-text{
     padding-right:20px ;
+    color: white;
 }
 
 .author_description{
     width: 600px; /* Ширина слоя */
     float: right;
     margin-top: 50px;
-    margin-right: 400px;
+    margin-right: 420px;
 
 
 }
@@ -103,4 +88,25 @@ a:hover{
     margin-left: 500px;
     margin-top: 20px;
 }
+
+.btn {
+    margin:10px ;
+
+
+}
+
+#title{
+    color: black;
+
+}
+
+#title :hover{
+    color: limegreen;
+
+}
+
+.nav-item{
+    display: inline;
+}
+
 
