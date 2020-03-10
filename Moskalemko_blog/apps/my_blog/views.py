@@ -5,27 +5,25 @@ from Moskalemko_blog.apps.my_blog.models import Post, Keywords, Author
 # Create your views here.
 
 
-
-
 def index(requset):
     keywords_list = Keywords.objects.all()
     post_list = Post.objects.all()
-    authors_list = Author.objects.get()
+    # authors_list = Author.objects.get()
     context = {
         'posts':post_list,
         'keywords':keywords_list,
-        'authors': authors_list
     }
     return render(requset, "index.html", context)
+
 
 def post(requset, post_id):
     post = Post.objects.get(id=post_id)
 
     context = {
         'post':post,
-
     }
     return render(requset, "post.html", context)
+
 
 def about(requset):
     context = {

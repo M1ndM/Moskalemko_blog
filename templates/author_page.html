@@ -4,7 +4,7 @@
 {% block content %}
     {% autoescape off %}
     <h1 align="center">{{ author_name }}</h1>
-    <img src="..\{{ author_photo }}" class="author_photo">
+    <img src="..\{{ author_photo }}" class="rounded ml-3 float-left">
         <div class="author_description">{{ author_description }}</div>
     {% endautoescape %}
 {% endblock %}

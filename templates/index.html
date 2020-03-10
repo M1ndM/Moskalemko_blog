@@ -11,18 +11,20 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     </head>
         {% block topmenu %}
-            <nav class="navbar fixed-top navbar-dark bg-dark">
-                <ul class="navbar-nav mr-auto">
+            <nav class="navbar  navbar-dark bg-dark">
+                <ul class="navbar ">
                     <li class="navbar-brand">
                         <img src="https://upload.wikimedia.org/wikipedia/ru/thumb/2/2c/NAVI_logo.png/1200px-NAVI_logo.png" width="60" height="60">
                     </li>
                     <li class="nav-item">
-                       <button type="button" class="btn btn-outline-light">Главная</button>
+                        <a href="http://127.0.0.1:8000"><button type="button" class="btn btn-outline-light">Главная</button></a>
                     </li>
 
                     <li class="nav-item">
-                       <button type="button" class="btn btn-outline-light">О нас</button>
+                        <a href="http://127.0.0.1:8000/contacts/"><button type="button" class="btn btn-outline-light">О нас</button></a>
                     </li>
+
+
                 </ul>
             </nav >
         {% endblock %}
@@ -38,7 +40,7 @@
                     </a></h1>
                     <p class="preview">{{ post.post_text }}</p>
                     <div class="keywords">{{ keywords }}</div>
-                    <a href="{% url 'author' authors.id %}">{{ authors.author_name }}</a>
+                    <a href="{% url 'author' post.post_author.id %}">{{ post.post_author.author_name }}</a>
                 {% endfor %}
             </div>
         {% endblock %}
