@@ -32,15 +32,17 @@
         {% block content %}
             <div class="main">
                 {% for post in posts %}
-                    <h1><a href="{% url 'post' post.id %}">
-                        <img src="{{ post.post_foto }}" width="100px" height="80px" align="left" class="post_foto">
+                    <div class="post">
+                        <h1><a href="{% url 'post' post.id %}">
+                            <img src="{{ post.post_foto }}" width="100px" height="80px" align="left" class="post_foto">
 
-                        <div id="title"><h2>{{ post.post_title }}</h2></div>
+                            <div id="title"><h2>{{ post.post_title }}</h2></div>
 
-                    </a></h1>
-                    <p class="preview">{{ post.post_text }}</p>
-                    <div class="keywords">{{ keywords }}</div>
-                    <a href="{% url 'author' post.post_author.id %}">{{ post.post_author.author_name }}</a>
+                        </a></h1>
+                        <p class="preview">{{ post.post_text }}</p>
+                        <div class="keywords">{{ keywords }}</div>
+                        <a href="{% url 'author' post.post_author.id %}">{{ post.post_author.author_name }}</a>
+                    </div>
                 {% endfor %}
             </div>
         {% endblock %}

@@ -27,7 +27,7 @@
 .main {
     width: 500px; /* Ширина слоя */
     margin: 0 auto 50px; /* Выравнивание по центру */
-    text-decoration: none  ;
+
 
 }
 .footer {
@@ -82,7 +82,6 @@
 }
 
 
-
 .btn {
     margin:10px ;
 
@@ -94,9 +93,13 @@
 
 }
 
-
-
 li{
     list-style-type: none;
 }
 
+.post{
+    border: 2px solid black;
+    margin: 25px 0px;
+    box-shadow: 5px -3px 5px #828282;
+    padding: 10px;
+}
